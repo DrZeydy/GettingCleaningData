@@ -48,6 +48,13 @@ fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequ
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions."
 
+The variables were changed to use more descriptive variable names.  In particular, the following substitutions were made:
+- prefix 't' -> "time"
+- prefix 'f' -> "frequency"
+- "Acc" -> "Acceleration"
+- "Gyro" -> "Gyration"
+- "Mag" -> "Magnitude"
+- "std" -> "StdDev"
 ---
 Transformations
 ---
@@ -55,11 +62,5 @@ To create the tidy data set, I did the following:
 1. Merged the training and the test sets to create one data set.
 2. Extracted only the measurements on the mean and standard deviation for each measurement. 
 3. Used descriptive activity names to name the activities in the data set using names from activity_label.txt
-4. Labeled the data set with descriptive variable names by expanding on the short names from features.txt.  In particular, the following substitions were made:
-- prefix 't' -> "time"
-- prefix 'f' -> "frequency"
-- "Acc" -> "Acceleration"
-- "Gyro" -> "Gyration"
-- "Mag" -> "Magnitude"
-- "std" -> "StdDev"
+4. Labeled the data set with descriptive variable names by expanding on the short names from features.txt (see above)
 5. Included in the tidy data set only the average of each variable (mean.variable.name) for each activity and each subject.
